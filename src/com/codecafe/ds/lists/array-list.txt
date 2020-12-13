@@ -50,6 +50,10 @@ Hence, the trimToSize() method removes the unassigned space and changes the capa
 - add(int index, Object o)
   -> list.add(2, "hello");
      adds an element at 2nd index (3rd position)
+     
+- boolean arraylist.addAll(int index, Collection c)
+  index is optional
+  -> numbers.addAll(primeNumbers);
   
 - remove(Object o)
   -> list.remove("hello")
