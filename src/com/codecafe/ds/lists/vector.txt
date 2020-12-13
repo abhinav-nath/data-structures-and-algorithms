@@ -1,0 +1,27 @@
+---------------------
+ Vector - since 1.0
+---------------------
+
+public class Vector<E>
+extends AbstractList<E>
+implements List<E>, RandomAccess, Cloneable, Serializable
+
+Both ArrayList and Vector implements the List interface and provides the same functionalities.
+However, there exist some differences between them.
+
+** Vector is thread-safe.
+
+The Vector class synchronizes each individual operation.
+This means whenever we want to perform some operation on vectors, the Vector class automatically applies a lock to that operation.
+
+It is because when one thread is accessing a vector, and at the same time another thread tries to access it, an exception called ConcurrentModificationException is generated.
+Hence, this continuous use of lock for each operation makes vectors less efficient.
+
+However, in array lists, methods are not synchronized. Instead, it uses the Collections.synchronizedList() method that synchronizes the list as a whole.
+
+Note: If a thread-safe implementation is not needed, it is recommended to use ArrayList in place of Vector.
+
+
+Here is how we can create vectors in Java.
+
+Vector<Type> vector = new Vector<>();

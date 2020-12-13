@@ -1,0 +1,93 @@
+-----------------------
+ ArrayList - since 1.2
+-----------------------
+
+public class ArrayList<E>
+extends AbstractList<E>
+implements List<E>, RandomAccess, Cloneable, Serializable
+
+- Resizable-array implementation of the List interface (it is backed by an array).
+- In addition to implementing the List interface, this class provides methods to manipulate the size of the array that is used internally to store the list.
+- This class is roughly equivalent to Vector, except that it is unsynchronized.
+- Each ArrayList instance has a capacity. The capacity is the size of the array used to store the elements in the list.
+
+List<Integer> list = new ArrayList<>();  -->  creates an empty list with an initial capacity of 10
+
+List<Integer> list = new ArrayList<>(20);  -->  creates an empty list with an initial capacity of 20
+
+
+**Note that this implementation is not synchronized.
+
+The synchronizedList() method of java.util.Collections class is used to return a synchronized (thread-safe) list backed by the specified list.
+In order to guarantee serial access, it is critical that all access to the backing list is accomplished through the returned list.
+
+// create a synchronized list 
+List<String> synlist = Collections.synchronizedList(list);
+
+
+-------------------
+ Important methods
+-------------------
+
+- trimToSize()
+
+Internally, ArrayList uses a backing array to store all its elements.
+Now, at some point, the array will be filled.
+When the internal array is full, a new array is created with 1.5 times more capacity than the current array.
+And, all elements are moved to the new array.
+
+For example, suppose the internal array is full and we have to add only 1 element.
+Here, the ArrayList will expand with the same ratio (i.e. 1.5 times the previous array).
+
+In this case, there will be some unassigned space in the internal array.
+Hence, the trimToSize() method removes the unassigned space and changes the capacity of arraylist equal to the number of elements in the arraylist.
+
+
+- add(Object o)
+  -> list.add("hello")
+     adds an element to the end of the list
+
+- add(int index, Object o)
+  -> list.add(2, "hello");
+     adds an element at 2nd index (3rd position)
+  
+- remove(Object o)
+  -> list.remove("hello")
+
+- remove(int index)
+  -> list.remove(4);
+
+- set(int index, Object o)
+  -> list.set(2, "tom");
+     updates/replaces the element present at index 2
+
+- Object get(int index)
+  -> list.get(2);
+
+- int size()
+  -> list.size();
+
+- boolean contains(Object o)
+  -> list.contains("Jerry");
+
+- clear()
+  -> list.clear()
+   remove all the elements of the array list in one go
+   
+- Object[] toArray()
+  -> int arr[] = new arr[list.size()];
+     arr = list.toArray();
+     
+- Object[] toArray(T[] a)
+  -> int arr[] = new arr[list.size()];
+     list.toArray(arr);
+     
+
+----------------
+ Sort ArrayList
+----------------
+We have a sort() method in the Collections class.
+This class is is a part of java.util package.
+This method can be used to sort an ArrayList.
+
+Collections.sort(fruits);
