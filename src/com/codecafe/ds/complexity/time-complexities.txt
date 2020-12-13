@@ -1,0 +1,21 @@
+from best to worst
+
+O(1)              -->      Constant
+O(log n)          -->      Logarithmic
+O(n)              -->      Linear
+O(nlog n)         -->      n log n
+O(n^2)            -->      Quadratic
+
+
+log is base 2 not base 10
+
+
+Time complexities of Array operations
+
+Retrieve with index                                       -->       O(1) - constant time
+Retrieve without index                                    -->       O(n) - linear time
+Add an element to a full array                            -->       O(n)
+Add an element to the end of an array (has space)         -->       O(1)
+Insert or update and element at a specific index          -->       O(1)
+Delete an element by setting it to null                   -->       O(1)
+Delete an element by shifting elements                    -->       O(n)
