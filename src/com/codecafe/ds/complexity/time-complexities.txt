@@ -19,3 +19,9 @@ Add an element to the end of an array (has space)         -->       O(1)
 Insert or update and element at a specific index          -->       O(1)
 Delete an element by setting it to null                   -->       O(1)
 Delete an element by shifting elements                    -->       O(n)
+
+
+
+HashMap
+
+get / put / remove                                        -->       O(1)
