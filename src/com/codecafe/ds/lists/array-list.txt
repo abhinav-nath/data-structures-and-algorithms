@@ -85,7 +85,10 @@ Hence, the trimToSize() method removes the unassigned space and changes the capa
 - Object[] toArray(T[] a)
   -> int arr[] = new arr[list.size()];
      list.toArray(arr);
-     
+
+- boolean retainAll(Collection<?> c)
+  -> languages1.retainAll(languages2);
+  retains only those elements in the arraylist that are also present in the specified collection.
 
 ----------------
  Sort ArrayList
