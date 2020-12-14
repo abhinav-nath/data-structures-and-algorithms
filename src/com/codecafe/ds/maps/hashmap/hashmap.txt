@@ -22,3 +22,40 @@ This is best done at creation time, to prevent accidental unsynchronized access 
 
    Map m = Collections.synchronizedMap(new HashMap(...));
 
+equal and hashcode contract in Java :
+
+- if two objects are equal, they should have the same hash codes as well
+
+
+Low level implementation of HashMap :
+
+HashMap is an array of Nodes.
+
+Node<K, V>[] table;
+
+------------
+ Node<K, V>
+------------
+int hash;
+K key;
+V value;
+Node<K, V> next;
+
+So Node is a Linked List.
+
+And HashMap is an array of Linked Lists.
+
+Each index in the array is known as a Bucket.
+Each bucket is a linked list of nodes.
+
+An instance of HashMap has two parameters that affect its performance:
+- initial capacity, and
+- load factor
+The capacity is the number of buckets in the hash table, and the initial capacity is simply the capacity at the time the hash table is created.
+
+The load factor (default load factor .75) is a measure of how full the hash table is allowed to get before its capacity is automatically increased.
+When the number of entries in the hash table exceeds the product of the load factor and the current capacity, the hash table is rehashed (that is, internal data structures are rebuilt) so that the hash table has approximately twice the number of buckets.
+
+HashMap allows a null key which always goes to index 0 as hash code of null is 0.
+
+Objects.hash(null); --> 0
