@@ -1,0 +1,47 @@
+---------------------------
+ LinkedHashMap - since 1.4
+---------------------------
+public class LinkedHashMap<K,V>
+extends HashMap<K,V>
+implements Map<K,V>
+
+- Hash table and linked list implementation of the Map interface
+- Insertion order is preserved
+- Maintains a doubly-linked list running through all of its entries
+- permits null values and one null key
+- not synchronized unlike Hashtable
+
+----------------------------
+ LinkedHashMap as LRU Cache
+----------------------------
+
+A special constructor is provided to create a linked hash map whose order of iteration is the order in which its entries were last accessed, from least-recently accessed to most-recently (access-order).
+This kind of map is well-suited to building LRU caches.
+
+Invoking the put, putIfAbsent, get, getOrDefault, compute, computeIfAbsent, computeIfPresent, or merge methods results in an access to the corresponding entry (assuming it exists after the invocation completes).
+
+The replace methods only result in an access of the entry if the value is replaced.
+
+The putAll method generates one entry access for each mapping in the specified map, in the order that key-value mappings are provided by the specified map's entry set iterator.
+
+No other methods generate entry accesses.
+In particular, operations on collection-views do not affect the order of iteration of the backing map.
+
+
+--------------
+ Constructors
+--------------
+LinkedHashMap()
+Constructs an empty insertion-ordered LinkedHashMap instance with the default initial capacity (16) and load factor (0.75).
+
+LinkedHashMap(int initialCapacity)
+Constructs an empty insertion-ordered LinkedHashMap instance with the specified initial capacity and a default load factor (0.75).
+
+LinkedHashMap(int initialCapacity, float loadFactor)
+Constructs an empty insertion-ordered LinkedHashMap instance with the specified initial capacity and load factor.
+
+LinkedHashMap(int initialCapacity, float loadFactor, boolean accessOrder)
+Constructs an empty LinkedHashMap instance with the specified initial capacity, load factor and ordering mode.
+
+LinkedHashMap(Map<? extends K,? extends V> m)
+Constructs an insertion-ordered LinkedHashMap instance with the same mappings as the specified map.
