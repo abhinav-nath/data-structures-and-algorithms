@@ -9,7 +9,7 @@ implements Map<K,V>
 - Insertion order is preserved
 - Maintains a doubly-linked list running through all of its entries
 - permits null values and one null key
-- not synchronized unlike Hashtable
+- not synchronized unlike HashTable
 
 ----------------------------
  LinkedHashMap as LRU Cache
