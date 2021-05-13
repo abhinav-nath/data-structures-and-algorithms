@@ -8,6 +8,8 @@ import java.util.concurrent.ConcurrentHashMap;
 // The ConcurrentHashMap class is similar to HashMap
 // except that it's thread-safe and allows modification while iteration
 
+// https://www.journaldev.com/122/concurrenthashmap-in-java
+
 public class ConcurrentHashMapDemo {
 
     public static void main(String[] args) {
