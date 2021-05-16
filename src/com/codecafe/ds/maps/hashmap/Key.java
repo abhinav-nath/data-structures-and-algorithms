@@ -18,6 +18,7 @@ public class Key {
 
     @Override
     public boolean equals(Object obj) {
+        System.out.println("equals called for key : " + ((Key) obj).key);
         return key.equals(((Key) obj).key);
     }
 
