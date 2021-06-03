@@ -1,4 +1,4 @@
-package com.codecafe.ds.lists;
+package com.codecafe.ds.lists.arraylist;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
