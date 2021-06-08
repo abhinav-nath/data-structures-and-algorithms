@@ -24,4 +24,14 @@ public class LinkedList {
         System.out.println("null");
     }
 
+    // find last element
+    public void findLastElement() {
+        Node current = this.head;
+
+        while (current.getNext() != null)
+            current = current.getNext();
+
+        System.out.println("last element is : " + current.getData());
+    }
+
 }

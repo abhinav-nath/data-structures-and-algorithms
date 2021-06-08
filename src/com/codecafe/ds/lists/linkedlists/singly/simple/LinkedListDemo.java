@@ -12,6 +12,7 @@ public class LinkedListDemo {
         linkedList.addToFront(50);
 
         linkedList.printList();
+        linkedList.findLastElement();
     }
 
 }
