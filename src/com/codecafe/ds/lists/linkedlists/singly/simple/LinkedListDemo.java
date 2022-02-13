@@ -3,7 +3,6 @@ package com.codecafe.ds.lists.linkedlists.singly.simple;
 public class LinkedListDemo {
 
     public static void main(String[] args) {
-
         LinkedList linkedList = new LinkedList();
         linkedList.addToFront(10);
         linkedList.addToFront(20);
