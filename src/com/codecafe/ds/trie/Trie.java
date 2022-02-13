@@ -1,64 +1,58 @@
 package com.codecafe.ds.trie;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Trie {
+
     private TrieNode root;
 
-    Trie() {
+    public Trie(List<String> words) {
         root = new TrieNode();
+        for (String word : words)
+            root.insert(word);
     }
 
-    void insert(String word) {
-        TrieNode current = root;
-
-        for (char l : word.toCharArray()) {
-            current = current.getChildren().computeIfAbsent(l, c -> new TrieNode());
-        }
-        current.setEndOfWord(true);
-    }
-
-    boolean delete(String word) {
-        return delete(root, word, 0);
-    }
-
-    boolean containsNode(String word) {
-        TrieNode current = root;
-
-        for (int i = 0; i < word.length(); i++) {
-            char ch = word.charAt(i);
-            TrieNode node = current.getChildren().get(ch);
-            if (node == null) {
+    public boolean find(String prefix, boolean exact) {
+        TrieNode lastNode = root;
+        for (char c : prefix.toCharArray()) {
+            lastNode = lastNode.getChildren().get(c);
+            if (lastNode == null)
                 return false;
-            }
-            current = node;
         }
-        return current.isEndOfWord();
+        return !exact || lastNode.isWord();
     }
 
-    boolean isEmpty() {
-        return root == null;
+    public boolean find(String prefix) {
+        return find(prefix, false);
     }
 
-    private boolean delete(TrieNode current, String word, int index) {
-        if (index == word.length()) {
-            if (!current.isEndOfWord()) {
-                return false;
-            }
-            current.setEndOfWord(false);
-            return current.getChildren().isEmpty();
+    public void suggestHelper(TrieNode root, List<String> list, StringBuffer curr) {
+        if (root.isWord()) {
+            list.add(curr.toString());
         }
-        char ch = word.charAt(index);
-        TrieNode node = current.getChildren().get(ch);
 
-        if (node == null)
-            return false;
+        if (root.getChildren() == null || root.getChildren().isEmpty())
+            return;
 
-        boolean shouldDeleteCurrentNode = delete(node, word, index + 1) && !node.isEndOfWord();
-
-        if (shouldDeleteCurrentNode) {
-            current.getChildren().remove(ch);
-            return current.getChildren().isEmpty();
+        for (TrieNode child : root.getChildren().values()) {
+            suggestHelper(child, list, curr.append(child.getC()));
+            curr.setLength(curr.length() - 1);
         }
-        return false;
+    }
+
+    public List<String> suggest(String prefix) {
+        List<String> list = new ArrayList<>();
+        TrieNode lastNode = root;
+        StringBuffer curr = new StringBuffer();
+        for (char c : prefix.toCharArray()) {
+            lastNode = lastNode.getChildren().get(c);
+            if (lastNode == null)
+                return list;
+            curr.append(c);
+        }
+        suggestHelper(lastNode, list, curr);
+        return list;
     }
 
 }

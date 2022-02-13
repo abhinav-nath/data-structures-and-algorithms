@@ -3,21 +3,47 @@ package com.codecafe.ds.trie;
 import java.util.HashMap;
 import java.util.Map;
 
-class TrieNode {
+public class TrieNode {
 
-    private final Map<Character, TrieNode> children = new HashMap<>();
-    private boolean endOfWord;
+    private Map<Character, TrieNode> children;
+    private char c;
+    private boolean isWord;
 
-    Map<Character, TrieNode> getChildren() {
+    public TrieNode(char c) {
+        this.c = c;
+        children = new HashMap<>();
+    }
+
+    public TrieNode() {
+        children = new HashMap<>();
+    }
+
+    public void insert(String word) {
+        if (word == null || word.isEmpty())
+            return;
+        char firstChar = word.charAt(0);
+        TrieNode child = children.get(firstChar);
+        if (child == null) {
+            child = new TrieNode(firstChar);
+            children.put(firstChar, child);
+        }
+
+        if (word.length() > 1)
+            child.insert(word.substring(1));
+        else
+            child.isWord = true;
+    }
+
+    public Map<Character, TrieNode> getChildren() {
         return children;
     }
 
-    boolean isEndOfWord() {
-        return endOfWord;
+    public char getC() {
+        return c;
     }
 
-    void setEndOfWord(boolean endOfWord) {
-        this.endOfWord = endOfWord;
+    public boolean isWord() {
+        return isWord;
     }
 
 }
