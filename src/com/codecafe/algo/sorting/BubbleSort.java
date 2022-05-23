@@ -5,7 +5,6 @@ import com.codecafe.algo.sorting.utils.GeneralUtils;
 public class BubbleSort {
 
   public static void main(String[] args) {
-
     SortingData sortingData = GeneralUtils.prepareSortingData();
 
     if (!sortingData.isTestMode()) {
@@ -53,7 +52,6 @@ public class BubbleSort {
   }
 
   private static void bubbleSort(int[] elements) {
-
     int n = elements.length;
 
     long startTime = System.nanoTime();
@@ -70,8 +68,8 @@ public class BubbleSort {
 
     if (elements.length <= 500) {
       System.out.println("\n\nSorted elements : ");
-      for (int i = 0; i < n; i++) {
-        System.out.print(elements[i] + " ");
+      for (int element : elements) {
+        System.out.print(element + " ");
       }
     }
 

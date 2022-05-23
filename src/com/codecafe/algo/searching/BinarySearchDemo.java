@@ -5,8 +5,7 @@ import java.util.Arrays;
 public class BinarySearchDemo {
 
   public static void main(String[] args) {
-
-    int arr[] = {20, 10, 80, 70, 60, 50, 40, 30, 90, 100};
+    int[] arr = {20, 10, 80, 70, 60, 50, 40, 30, 90, 100};
 
     // binary search requires a sorted array
     Arrays.sort(arr);
@@ -16,7 +15,6 @@ public class BinarySearchDemo {
     int elementToSearch = 30;
 
     binarySearch(arr, elementToSearch);
-
   }
 
   private static void binarySearch(int[] arr, int elementToSearch) {
@@ -40,7 +38,6 @@ public class BinarySearchDemo {
 
     if (l > r)
       System.out.println("Element not found");
-
   }
 
 }
