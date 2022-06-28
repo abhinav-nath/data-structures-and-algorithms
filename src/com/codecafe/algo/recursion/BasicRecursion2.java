@@ -1,6 +1,6 @@
 package com.codecafe.algo.recursion;
 
-public class BasicRecursion {
+public class BasicRecursion2 {
 
   public static void main(String[] args) {
     printNumber(5);
