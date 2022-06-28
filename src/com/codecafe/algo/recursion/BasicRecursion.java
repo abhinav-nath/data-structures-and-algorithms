@@ -12,11 +12,13 @@ public class BasicRecursion {
 
     System.out.print(n + " ");
     printNumber(n - 1);
+
+    System.out.print("#");
   }
 
 }
 
 /*
   Output:
-  5 4 3 2 1
+  5 4 3 2 1 #####
 */
