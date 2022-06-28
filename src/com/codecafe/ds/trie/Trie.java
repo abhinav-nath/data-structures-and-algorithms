@@ -9,17 +9,20 @@ public class Trie {
 
   public Trie(List<String> words) {
     root = new TrieNode();
+
     for (String word : words)
       root.insert(word);
   }
 
   public boolean find(String prefix, boolean exact) {
     TrieNode lastNode = root;
+
     for (char c : prefix.toCharArray()) {
       lastNode = lastNode.getChildren().get(c);
       if (lastNode == null)
         return false;
     }
+
     return !exact || lastNode.isWord();
   }
 
@@ -45,12 +48,14 @@ public class Trie {
     List<String> list = new ArrayList<>();
     TrieNode lastNode = root;
     StringBuffer curr = new StringBuffer();
+
     for (char c : prefix.toCharArray()) {
       lastNode = lastNode.getChildren().get(c);
       if (lastNode == null)
         return list;
       curr.append(c);
     }
+
     suggestHelper(lastNode, list, curr);
     return list;
   }

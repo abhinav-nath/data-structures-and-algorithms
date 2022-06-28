@@ -21,8 +21,10 @@ public class TrieNode {
   public void insert(String word) {
     if (word == null || word.isEmpty())
       return;
+
     char firstChar = word.charAt(0);
     TrieNode child = children.get(firstChar);
+
     if (child == null) {
       child = new TrieNode(firstChar);
       children.put(firstChar, child);
