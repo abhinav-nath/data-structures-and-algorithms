@@ -1,4 +1,4 @@
-# Data Structures and Algorithms using Java
+# Data Structures and Algorithms
 
 - Algorithms
   - [Recursion](./src/com/codecafe/algo/recursion "Recursion")
