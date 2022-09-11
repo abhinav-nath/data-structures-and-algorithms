@@ -2,12 +2,11 @@ package com.codecafe.algorithms.recursion;
 
 public class Palindrome {
 
-  public static void main(String[] args) {
-    String s = "racecar";
-    System.out.println(isPalindrome(0, s.length() - 1, s));
-  }
-
-  private static boolean isPalindrome(int l, int r, String s) {
+  /*
+    l = 0
+    r = s.length() - 1;
+   */
+  public boolean isPalindrome(int l, int r, String s) {
     if (l >= r)
       return true;
 
