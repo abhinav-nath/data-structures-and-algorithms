@@ -7,12 +7,7 @@ package com.codecafe.algorithms.recursion;
  */
 public class SumOfNaturalNumbers {
 
-  public static void main(String[] args) {
-    int n = 10;
-    System.out.println("Sum(" + n + ") = " + sum(n));
-  }
-
-  private static int sum(int n) {
+  public int sum(int n) {
     if (n == 0)
       return 0;
 
