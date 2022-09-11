@@ -2,12 +2,7 @@ package com.codecafe.algorithms.recursion;
 
 public class MoveAllXToEnd {
 
-  public static void main(String[] args) {
-    String input = "axxbcxexfgxxhixj";
-    System.out.println(moveAllXtoTheEnd(input));
-  }
-
-  private static String moveAllXtoTheEnd(String input) {
+  public String moveAllXtoTheEnd(String input) {
     if (input.length() == 0)
       return "";
 
