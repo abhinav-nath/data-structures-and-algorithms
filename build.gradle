@@ -1,0 +1,14 @@
+plugins {
+  id 'java'
+}
+
+group 'org.codecafe'
+version '1.0.0'
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  testImplementation 'org.junit.jupiter:junit-jupiter-api'
+}
