@@ -4,6 +4,8 @@
   - [Time Complexity](notes/time-complexity.md)
   - [Recursion](src/main/java/com/codecafe/algorithms/recursion)
   - [Searching](src/main/java/com/codecafe/algorithms/searching)
+    - [Binary Search](notes/binary-search-algorithm.md)
+      - [code](src/main/java/com/codecafe/algorithms/searching/BinarySearch.java) 
   - [Sorting](src/main/java/com/codecafe/algorithms/sorting)
 
 - **Data Structures**
