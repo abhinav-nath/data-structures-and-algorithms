@@ -69,10 +69,10 @@ for(i=0; i < n; i++)
 
 The time complexity for the above code will be **Quadratic**, i.e. `O(n²)`.
 The running time of the two loops is proportional to the square of `n`.
-When `n` doubles, the running time increases by `N * N`.
+When `n` doubles, the running time increases by `n * n`.
 
 ```java
-while(low <= high) 
+while(low <= high)
 {
     mid = (low + high) / 2;
     if (target < list[mid])
