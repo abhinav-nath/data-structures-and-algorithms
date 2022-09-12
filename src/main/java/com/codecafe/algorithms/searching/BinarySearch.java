@@ -13,7 +13,10 @@ public class BinarySearch {
 
     int m = (l + r) / 2;
 
+    int i = 0;
+
     while (l <= r) {
+      System.out.println("pass #" + ++i + ", l = " + l + ", r = " + r);
       if (arr[m] < elementToSearch) {
         l = m + 1;
       } else if (arr[m] == elementToSearch) {

@@ -1,5 +1,6 @@
 package com.codecafe.algorithms.searching;
 
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -18,7 +19,8 @@ class BinarySearchTest {
     return Stream.of(
       arguments(new int[]{20, 10, 80, 70, 60, 50, 40, 30, 90, 100}, 30, 2),
       arguments(new int[]{4, 9, 10, 15, 22, 26, 27}, 27, 6),
-      arguments(new int[]{4, 9, 10, 15, 22, 26}, 27, -1)
+      arguments(new int[]{4, 9, 10, 15, 22, 26}, 27, -1),
+      arguments(IntStream.rangeClosed(1, 1000).toArray(), 1000, 999)
     );
   }
 
