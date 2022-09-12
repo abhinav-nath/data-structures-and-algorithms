@@ -20,6 +20,8 @@ When we say the time complexity is `log n`, we actually mean `log₂ n`, althoug
 
 Let's first understand what `log₂(n)` means:
 
+Before proceeding, know that `logₙ(nᵐ) = mlogₙ(n) = m x 1 = m`
+
 ```
 Expression: log₂(n)
 - - - - - - - - - - - - - - -
