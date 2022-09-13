@@ -97,12 +97,12 @@ Same table as a graph:
 
 It is easy to calculate the runtime of a binary search algorithm on an `n` that's exactly a power of 2.
 
-If `n` is 128, binary search will require at most 8 guesses (`log₂ 128 + 1`)
+If `n` is 128, binary search will require at most 8 guesses (`log₂(128) + 1`)
 
 **What if `n` isn't a power of 2?** In that case, we can look at the closest lower power of 2.
 
-For an array whose length is 1000, the closest lower power of 2 is 512, which equals 2⁹.
-We can thus estimate that `log₂ 1000` is a number greater than 9 and less than 10, or use a calculator to see that its about 9.97.
+For an array whose length is 1000, the closest lower power of 2 is 512, which equals `2⁹`.
+We can thus estimate that `log₂(1000)` is a number greater than 9 and less than 10, or use a calculator to see that its about 9.97.
 Adding one to that yields about 10.97.
 In the case of a decimal number, we round down to find the actual number of guesses.
 **Therefore, for a 1000-element array, binary search would require at most 10 guesses.**
@@ -110,6 +110,6 @@ In the case of a decimal number, we round down to find the actual number of gues
 For the [Tycho-2 star catalog](https://en.wikipedia.org/wiki/Tycho-2_Catalogue) with 2,539,913 stars, the closest lower power of 2 is `2²¹` (which is 2,097,152), so we would need at most 22 guesses.
 **Much better than linear search!**
 
-Compare `n` vs `log₂ n` below:
+Compare `n` vs `log₂(n)` below:
 
 <img alt="n vs log n" src="../images/n-vs-log-n-time-complexity.png" title="n vs log n" width="400"/>
