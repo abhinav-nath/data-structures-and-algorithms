@@ -70,3 +70,46 @@ And guess what, in mathematics, the function `log₂ n` means exactly the same.
 We have already seen how the `log` function works above, did you notice something there?
 
 For `n = 8`, the output of `log₂ n` comes out to be 3, which means the array can be halved 3 times maximum, hence the number of steps (at most) to find the target value will be `(3 + 1) = 4`.
+
+Here's a table showing the base-2 logarithms of various values of `n`:
+
+| n         | log₂(n) |
+|-----------|---------|
+| 1         | 0       |
+| 2         | 1       |
+| 4         | 2       |
+| 8         | 3       |
+| 16        | 4       |
+| 32        | 5       |
+| 64        | 6       |
+| 128       | 7       |
+| 256       | 8       |
+| 512       | 9       |
+| 1024      | 10      |
+| 1,048,576 | 20      |
+| 2,097,152 | 21      |
+
+Same table as a graph:
+
+<img src="../images/binary-search-time-complexity-graph.png" title="Binary Search Time Complexity Graph" alt="Binary Search Time Complexity Graph" width="400"/>
+
+> The logarithm function grows very slowly. **Logarithms** are the inverse of **exponentials**.
+
+It is easy to calculate the runtime of a binary search algorithm on an `n` that's exactly a power of 2.
+
+If `n` is 128, binary search will require at most 8 guesses (`log₂ 128 + 1`)
+
+**What if `n` isn't a power of 2?** In that case, we can look at the closest lower power of 2.
+
+For an array whose length is 1000, the closest lower power of 2 is 512, which equals 2⁹.
+We can thus estimate that `log₂ 1000` is a number greater than 9 and less than 10, or use a calculator to see that its about 9.97.
+Adding one to that yields about 10.97.
+In the case of a decimal number, we round down to find the actual number of guesses.
+**Therefore, for a 1000-element array, binary search would require at most 10 guesses.**
+
+For the [Tycho-2 star catalog](https://en.wikipedia.org/wiki/Tycho-2_Catalogue) with 2,539,913 stars, the closest lower power of 2 is `2²¹` (which is 2,097,152), so we would need at most 22 guesses.
+**Much better than linear search!**
+
+Compare `n` vs `log₂ n` below:
+
+<img alt="n vs log n" src="../images/n-vs-log-n-time-complexity.png" title="n vs log n" width="400"/>
