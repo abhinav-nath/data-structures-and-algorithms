@@ -1,6 +1,7 @@
 # Data Structures and Algorithms (Java)
 
 - **Algorithms**
+  - [Logarithmic Functions](notes/logarithmic-functions.md)
   - [Time Complexity](notes/time-complexity.md)
   - [Recursion](src/main/java/com/codecafe/algorithms/recursion)
   - [Searching](src/main/java/com/codecafe/algorithms/searching)
