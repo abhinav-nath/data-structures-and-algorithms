@@ -16,37 +16,6 @@ Here are the steps:
 
 **Why is the time complexity of binary search `O(log n)` and how can we calculate the number of steps required to search an element from a given array without doing any calculations?**
 
-When we say the time complexity is `log n`, we actually mean `log₂ n`, although the **base** of the log doesn't matter in asymptotic notations, but still to understand this better, we generally consider a base of 2.
-
-Let's first understand what `log₂(n)` means:
-
-Before proceeding, know that `logₙ(nᵐ) = mlogₙ(n) = m x 1 = m`
-
-```
-Expression: log₂(n)
-- - - - - - - - - - - - - - -
-For n = 2:
-log₂(2¹) = 1
-Output = 1
-- - - - - - - - - - - - - - -
-For n = 4
-log₂(2²) = 2
-Output = 2
-- - - - - - - - - - - - - - -
-For n = 8
-log₂(2³) = 3
-Output = 3
-- - - - - - - - - - - - - - -
-For n = 256
-log₂(2⁸) = 8
-Output = 8
-- - - - - - - - - - - - - - -
-For n = 2048
-log₂(2¹¹) = 11
-Output = 11
-- - - - - - - - - - - - - - -
-```
-
 ## Counting the Number of Steps
 
 As we have already seen, that with every **incorrect guess**, binary search cuts down the list of elements into half.
@@ -67,7 +36,7 @@ So we can say, _as the number of elements are getting doubled, the number of gue
 
 And guess what, in mathematics, the function `log₂ n` means exactly the same.
 
-We have already seen how the `log` function works above, did you notice something there?
+We have already seen [how the `log` function works](logarithmic-functions.md), did you notice something there?
 
 For `n = 8`, the output of `log₂ n` comes out to be 3, which means the array can be halved 3 times maximum, hence the number of steps (at most) to find the target value will be `(3 + 1) = 4`.
 
