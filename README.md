@@ -12,6 +12,7 @@
 
 - **Data Structures**
   - [Stack](src/main/java/com/codecafe/datastructures/stack)
+    - `O(1)` for push, pop and peek
   - [List](src/main/java/com/codecafe/datastructures/list)
     - [ArrayList](src/main/java/com/codecafe/datastructures/list/arraylist)
     - [LinkedList](src/main/java/com/codecafe/datastructures/list/linkedlists)

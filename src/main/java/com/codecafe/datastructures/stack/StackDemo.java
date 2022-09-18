@@ -4,6 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * Stack supports three operations:
+ * 1. Insert (or "Push"): Putting an item into the stack.
+ * 2. Peek: Look at the top item of the stack (the last inserted item that's not removed).
+ * 3. Remove (or "Pop"): Remove the top item of the stack.
+ */
+
 public class StackDemo {
 
   public static List<Integer> execute(List<String> instructions) {
