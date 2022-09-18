@@ -3,6 +3,7 @@
 - **Algorithms**
   - [Logarithmic Functions](notes/logarithmic-functions.md)
   - [Time Complexity](notes/time-complexity.md)
+    - [Time Complexity Cheatsheet](notes/time-complexity-cheatsheet.md) 
   - [Recursion](src/main/java/com/codecafe/algorithms/recursion)
   - [Searching](src/main/java/com/codecafe/algorithms/searching)
     - [Binary Search](notes/binary-search-algorithm.md)
