@@ -11,8 +11,6 @@ public class HashMapWithObjectAsKey {
 
   public static void main(String[] args) {
     Department salesDepartment = new Department("Marketing and Sales", "sales");
-    Department itDepartment = new Department("Software solutions", "it");
-    Department assetDepartment = new Department("Asset Management", "asset");
 
     Map<Person, Department> mapOfPersonToDepartment = new HashMap<>();
 

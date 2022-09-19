@@ -6,9 +6,10 @@ import java.util.List;
 import java.util.Map;
 
 class User {
-  int id;
-  String name;
-  String phone;
+
+  private final int id;
+  private final String name;
+  private final String phone;
 
   public User(int id, String name, String phone) {
     this.id = id;
@@ -42,8 +43,7 @@ public class ListToMap {
     Map<Integer, User> userMap = new HashMap<>();
 
     for (User user : users) {
-      if (userMap.get(user.getId()) == null)
-        userMap.put(user.getId(), user);
+      userMap.putIfAbsent(user.getId(), user);
     }
 
     System.out.println("userMap : " + userMap);

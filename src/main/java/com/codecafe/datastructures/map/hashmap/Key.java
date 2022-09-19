@@ -3,7 +3,7 @@ package com.codecafe.datastructures.map.hashmap;
 // custom Key class to override hashCode() and equals() method
 public class Key {
 
-  private String key;
+  private final String key;
 
   public Key(String key) {
     this.key = key;

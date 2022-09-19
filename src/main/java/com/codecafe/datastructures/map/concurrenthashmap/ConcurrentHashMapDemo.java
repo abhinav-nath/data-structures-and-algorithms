@@ -1,7 +1,6 @@
 package com.codecafe.datastructures.map.concurrenthashmap;
 
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -22,17 +21,14 @@ public class ConcurrentHashMapDemo {
     myMap.put("5", "1");
     myMap.put("6", "1");
 
-    System.out.println("ConcurrentHashMap before iterator: " + myMap);
+    System.out.println("ConcurrentHashMap before: " + myMap);
 
-    Iterator<String> it = myMap.keySet().iterator();
-
-    while (it.hasNext()) {
-      String key = it.next();
+    for (String key : myMap.keySet()) {
       if (key.equals("3"))
         myMap.put(key + "new", "new3");
     }
 
-    System.out.println("ConcurrentHashMap after iterator: " + myMap);
+    System.out.println("ConcurrentHashMap after: " + myMap);
 
     // HashMap
     myMap = new HashMap<>();
@@ -43,18 +39,14 @@ public class ConcurrentHashMapDemo {
     myMap.put("5", "1");
     myMap.put("6", "1");
 
-    System.out.println("HashMap before iterator: " + myMap);
+    System.out.println("HashMap before: " + myMap);
 
-    Iterator<String> it1 = myMap.keySet().iterator();
-
-    while (it1.hasNext()) {
-      String key = it1.next();
+    for (String key : myMap.keySet()) {
       if (key.equals("3"))
-        myMap.put(key + "new", "new3");
+        myMap.put(key + "new", "new3"); // ConcurrentModificationException
     }
 
-    System.out.println("HashMap after iterator: " + myMap);
-
+    System.out.println("HashMap after: " + myMap);
   }
 
 }

@@ -6,7 +6,6 @@ import java.util.Map;
 public class HashMapDemo {
 
   public static void main(String[] args) {
-
     Map<Key, Integer> map = new HashMap<>();
 
     map.put(new Key("apple"), 10);
@@ -18,7 +17,6 @@ public class HashMapDemo {
     System.out.println();
     System.out.println("Value for apple : " + map.get(new Key("apple")));
     System.out.println("Value for amazon : " + map.get(new Key("amazon")));
-
   }
 
 }
