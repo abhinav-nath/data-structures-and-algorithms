@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 
 /**
  * Stack supports three operations:
- * 1. Insert (or "Push"): Putting an item into the stack.
+ * 1. Insert (or "Push"): Insert an item into the stack.
  * 2. Peek: Look at the top item of the stack (the last inserted item that's not removed).
  * 3. Remove (or "Pop"): Remove the top item of the stack.
  */
@@ -40,7 +40,7 @@ public class StackDemo {
   }
 
   public static void main(String[] args) {
-    List<String> instructions = List.of("push 1", "push 2", "peek", "push 3", "peek", "pop", "push 4", "peek");
+    List<String> instructions = List.of("push 1", "push 2", "push 3", "peek", "pop", "peek", "push 4", "peek");
     List<Integer> res = execute(instructions);
     System.out.println("Stack: " + res.stream().map(String::valueOf).collect(Collectors.joining(" ")));
   }
