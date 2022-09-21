@@ -27,7 +27,7 @@ public class WaysOfIteratingLists {
     }
 
     System.out.println("\nIterating using Lambda expression : ");
-    words.forEach(word -> System.out.println(word));
+    words.forEach(System.out::println);
 
     long count = words.stream().filter(word -> word.startsWith("A")).count();
 

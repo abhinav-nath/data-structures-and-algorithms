@@ -3,7 +3,6 @@ package com.codecafe.datastructures.list.arraylist.custom;
 public class CustomArrayListDemo {
 
   public static void main(String[] args) {
-
     CustomArrayList<Integer> list = new CustomArrayList<>();
 
     list.add(1);

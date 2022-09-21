@@ -6,7 +6,7 @@ public class CustomArrayList<E> {
 
   private static final int INITIAL_CAPACITY = 10;
   private int size = 0;
-  private Object elements[];
+  private Object[] elements;
 
   public CustomArrayList() {
     this.elements = new Object[INITIAL_CAPACITY];
@@ -26,16 +26,13 @@ public class CustomArrayList<E> {
 
   @SuppressWarnings("unchecked")
   public E get(int index) {
-
     if (index < 0 || index >= size) {
       throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
     }
-
     return (E) elements[index];
   }
 
   public Object remove(int index) {
-
     if (index < 0 || index >= size) {
       throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
     }
@@ -47,7 +44,6 @@ public class CustomArrayList<E> {
     }
 
     size--;
-
     return elementToBeRemoved;
   }
 

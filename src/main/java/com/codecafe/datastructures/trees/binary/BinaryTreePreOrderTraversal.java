@@ -7,6 +7,7 @@ public class BinaryTreePreOrderTraversal {
     Node root = BinaryTree.build(nodes);
     System.out.println(root.data);
     preOrder(root);
+    System.out.println();
   }
 
   public static void preOrder(Node root) {

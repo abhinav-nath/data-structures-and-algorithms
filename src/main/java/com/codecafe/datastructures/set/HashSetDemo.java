@@ -10,7 +10,6 @@ import java.util.Set;
 public class HashSetDemo {
 
   public static void main(String[] args) {
-
     Set<String> words = new HashSet<>();
 
     words.add("Apple");
@@ -38,14 +37,13 @@ public class HashSetDemo {
     }
 
     System.out.println("\nIterating using lambda expression : ");
-    words.forEach(word -> System.out.println(word));
+    words.forEach(System.out::println);
 
     long count = words.stream()
                       .filter(word -> word.startsWith("A"))
                       .count();
 
     System.out.println("\nCount of words starting with A : " + count);
-
   }
 
 }

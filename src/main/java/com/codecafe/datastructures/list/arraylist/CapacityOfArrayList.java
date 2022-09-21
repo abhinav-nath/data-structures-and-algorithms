@@ -6,7 +6,6 @@ import java.util.ArrayList;
 public class CapacityOfArrayList {
 
   public static void main(String[] args) throws Exception {
-
     System.out.println("list 1");
     ArrayList<String> list1 = new ArrayList<>();
     getCapacity(list1);

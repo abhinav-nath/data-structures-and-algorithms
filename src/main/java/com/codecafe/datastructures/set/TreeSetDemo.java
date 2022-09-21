@@ -13,7 +13,6 @@ import java.util.TreeSet;
 public class TreeSetDemo {
 
   public static void main(String[] args) {
-
     TreeSet<String> words = new TreeSet<>();
 
     words.add("Hollywood");
@@ -42,7 +41,7 @@ public class TreeSetDemo {
     }
 
     System.out.println("\nIterating using lambda expression : ");
-    words.forEach(word -> System.out.println(word));
+    words.forEach(System.out::println);
 
     // need to do TreeSet<String> words = new TreeSet<>(); instead of
     // Set<String> words = new TreeSet<>();
@@ -53,7 +52,6 @@ public class TreeSetDemo {
                       .count();
 
     System.out.println("\nCount of words starting with A : " + count);
-
   }
 
 }

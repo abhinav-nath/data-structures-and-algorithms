@@ -7,7 +7,6 @@ import java.util.TreeMap;
 public class SortTreeMapByValues {
 
   public static void main(String[] args) {
-
     Map<String, Integer> treeMap = new TreeMap<>();
 
     // map of fruit-price
