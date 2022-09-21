@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Trie {
 
-  private TrieNode root;
+  private final TrieNode root;
 
   public Trie(List<String> words) {
     root = new TrieNode();
@@ -30,7 +30,7 @@ public class Trie {
     return find(prefix, false);
   }
 
-  public void suggestHelper(TrieNode root, List<String> list, StringBuffer curr) {
+  public void suggestHelper(TrieNode root, List<String> list, StringBuilder curr) {
     if (root.isWord()) {
       list.add(curr.toString());
     }
@@ -47,7 +47,7 @@ public class Trie {
   public List<String> suggest(String prefix) {
     List<String> list = new ArrayList<>();
     TrieNode lastNode = root;
-    StringBuffer curr = new StringBuffer();
+    StringBuilder curr = new StringBuilder();
 
     for (char c : prefix.toCharArray()) {
       lastNode = lastNode.getChildren().get(c);

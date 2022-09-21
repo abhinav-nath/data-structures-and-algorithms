@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class TrieNode {
 
-  private Map<Character, TrieNode> children;
+  private final Map<Character, TrieNode> children;
   private char c;
   private boolean isWord;
 
