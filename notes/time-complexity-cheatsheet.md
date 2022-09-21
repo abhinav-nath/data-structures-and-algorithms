@@ -1,14 +1,14 @@
 # Time Complexity Cheatsheet
 
-- [O(1)](#constant-complexity---o1)
-- [O(n)](#linear-complexity---on)
-- [O(n^2)](#quadratic-complexity---on2)
-- [O(log(n))](#logarithmic-complexity---ologn)
-- [O(2^n)](#exponential-complexity---o2n)
+- [O(1)](#constant---o1)
+- [O(n)](#linear---on)
+- [O(n^2)](#quadratic---on2)
+- [O(log(n))](#logarithmic---ologn)
+- [O(2^n)](#exponential---o2n)
 - [O(n!)](#on)
-- [O(n log(n))](#on-logn)
+- [O(n log(n))](#linear-logarithmic---on-logn)
 
-##  Constant Complexity - O(1)
+##  Constant - O(1)
 
 An algorithm has constant time complexity if it takes the same time regardless of the number of inputs.
 
@@ -27,7 +27,7 @@ int sum = a + b + c;
 ```
 
 
-## Linear Complexity - O(n)
+## Linear - O(n)
 
 Linear time typically means looping through a linear data structure a constant number of times.
 
@@ -48,11 +48,12 @@ for (int j = 1; j <= n; j++) {
 ```
 
 
-## Quadratic Complexity - O(n^2)
+## Quadratic - O(n^2)
 
 If an algorithm's time complexity is quadratic, it means that the runtime of the algorithm is directly proportional to the square of the size of the input.
 
 - Nested loops, e.g., visiting each matrix entry
+- Shortest path between two nodes in a graph
 - Many brute force solutions
 
 ```java
@@ -64,7 +65,7 @@ for (int i = 1; i <= n; i++) {
 ```
 
 
-## Logarithmic Complexity - O(log(n))
+## Logarithmic - O(log(n))
 
 `log(n)` grows **VERY** slowly.
 
@@ -90,13 +91,14 @@ while (n > 0) {
 ```
 
 
-## Exponential Complexity - O(2^n)
+## Exponential - O(2^n)
 
 The runtime of the algorithm gets doubled after every addition in the input.
 
 **Grows very rapidly**. Often requires **memoization** to avoid repeated computations and reduce complexity.
 
 - **Combinatorial** problems, backtracking, e.g. subsets
+- Tower of Hanoi problem
 - Often involves **recursion** and is harder to analyze time complexity at first sight
 - Typically, for `n ≤ 25`
 
@@ -121,7 +123,7 @@ Grows insanely rapidly. Often requires memoization to avoid repeated computation
 - Typically for `n ≤ 12`
 
 
-## O(n log(n))
+## Linear Logarithmic - O(n log(n))
 
 - Sorting. The default sorting algorithm's expected runtime in all mainstream languages is `n log(n)`.
   For example, Java uses a variant of **Merge sort** for object sorting and a variant of **Quick Sort** for primitive type sorting.
