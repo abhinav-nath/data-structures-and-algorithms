@@ -2,28 +2,29 @@ package com.codecafe.datastructures.list.linkedlists.singly.simple;
 
 public class Node {
 
-  private Integer data;
+  private final int data;
   private Node next;
 
-  public Integer getData() {
-    return data;
+  public Node(int data, Node next) {
+    this.data = data;
+    this.next = next;
   }
 
-  public void setData(Integer data) {
-    this.data = data;
+  public int getData() {
+    return data;
   }
 
   public Node getNext() {
     return next;
   }
 
-  public void setNext(Node next) {
-    this.next = next;
+  public void setNext(Node node) {
+    this.next = node;
   }
 
   @Override
   public String toString() {
-    return this.data.toString();
+    return Integer.toString(this.data);
   }
 
 }

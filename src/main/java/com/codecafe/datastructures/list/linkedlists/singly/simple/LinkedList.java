@@ -4,11 +4,22 @@ public class LinkedList {
 
   private Node head;
 
+  public void add(int data) {
+    if (this.head == null) {
+      this.head = new Node(data, null);
+    } else {
+      Node end = this.head;
+
+      while (end.getNext() != null) {
+        end = end.getNext();
+      }
+
+      end.setNext(new Node(data, null));
+    }
+  }
+
   public void addToFront(int data) {
-    Node node = new Node();
-    node.setData(data);
-    node.setNext(this.head);
-    this.head = node;
+    this.head = new Node(data, this.head);
   }
 
   public void printList() {
